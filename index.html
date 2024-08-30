@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Perawatan Lansia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#" id="home">Home</a>
+        <a href="#jadwal-kegiatan" id="jadwal-kegiatan-link">Jadwal Kegiatan Lansia</a>
+        <a href="#jadwal-shift" id="jadwal-shift-link">Jadwal Shift Perawat</a>
+        <a href="#monitoring-pasien" id="monitoring-pasien-link">Monitoring Pasien</a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Jadwal Kegiatan Lansia -->
+        <div class="table-container" id="jadwal-kegiatan">
+            <h2>Jadwal Kegiatan Lansia</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hari</th>
+                        <th>Jam</th>
+                        <th>Kegiatan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Senin</td>
+                        <td>08:00 - 09:00</td>
+                        <td>Senam Pagi</td>
+                    </tr>
+                    <tr>
+                        <td>Selasa</td>
+                        <td>10:00 - 11:00</td>
+                        <td>Terapi Musik</td>
+                    </tr>
+                    <!-- Tambahkan jadwal kegiatan lainnya di sini -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Jadwal Shift Perawat -->
+        <div class="table-container" id="jadwal-shift">
+            <h2>Jadwal Shift Perawat</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama Perawat</th>
+                        <th>Shift</th>
+                        <th>Jam</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Andi</td>
+                        <td>Pagi</td>
+                        <td>07:00 - 15:00</td>
+                    </tr>
+                    <tr>
+                        <td>Budi</td>
+                        <td>Sore</td>
+                        <td>15:00 - 23:00</td>
+                    </tr>
+                    <!-- Tambahkan jadwal shift lainnya di sini -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Monitoring Pasien -->
+        <div class="tables" id="monitoring-pasien">
+            <h2>Monitoring Pasien</h2>
+            <div class="table-container">
+                <div id="gesture-table">
+                    <h3>Detected Gestures</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Gesture Label</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Content will be updated via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="sensor-table">
+                    <h3>Sensor Data</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Sensor Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Content will be updated via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="camera-feed">
+                <h3>Live Camera Feed</h3>
+                <img src="{{ url_for('video_feed') }}" alt="Camera Feed">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
